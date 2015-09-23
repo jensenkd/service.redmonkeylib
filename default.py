@@ -15,7 +15,7 @@ serviceForScript = 'script.movielib'
 class Run:
 
     def __init__(self):
-        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ')')
+        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ', 1)')
 
 class Monitor(xbmc.Monitor):
 
@@ -23,7 +23,7 @@ class Monitor(xbmc.Monitor):
         xbmc.Monitor.__init__(self)
         
     def onDatabaseUpdated(self, video):
-        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ')')
+        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ', 1)')
             
 class Player(xbmc.Player):
 
@@ -31,7 +31,7 @@ class Player(xbmc.Player):
         xbmc.Player.__init__(self) 
         
     def onPlayBackStopped(self):
-        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ')')
+        xbmc.executebuiltin('XBMC.RunScript(' + serviceForScript + ', 1)')
 
 Run()
 monitor = Monitor()
