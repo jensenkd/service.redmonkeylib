@@ -10,7 +10,7 @@ __icon__                = __addon__.getAddonInfo('icon')
 __addonpath__           = xbmc.translatePath(__addon__.getAddonInfo('path')).decode('utf-8')
 
 #name of script for this service work
-serviceForScript = 'script.movielib'
+serviceForScript = 'script.redmonkeylib'
 
 class Run:
 
